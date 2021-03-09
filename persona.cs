@@ -36,7 +36,7 @@ namespace Repositorio_Alumnos
         }
         
         //accion
-        public void presentarse()
+        public virtual void presentarse()
         {
             Console.WriteLine("Mucho gusto, me llamo " + this.nombre + " " + this.apellido);
             //Console.WriteLine($"Hola, mi nombre es {this.nombre} {this.apellido}");

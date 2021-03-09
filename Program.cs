@@ -20,6 +20,10 @@ namespace Repositorio_Alumnos
             //color favorito
             alumno1.ColorFavorito = "Rojo";
             Console.WriteLine(alumno1.ColorFavorito);
+
+            Alumno estudiante1 = new Alumno("jose", "Talamantes", 2758);
+            Console.WriteLine("Primer alumno " + estudiante1.NombreCompleto);
+            estudiante1.presentarse();
         }
     }
 }
