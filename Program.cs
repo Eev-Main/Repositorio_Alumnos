@@ -53,16 +53,17 @@ namespace Repositorio_Alumnos
             }
             Console.WriteLine(". . .");
             materiasDeInteres.Remove(programacionI);
-            Console.WriteLine(" Ahora me interesan " + materiasDeInteres.Count + "materias");
+            Console.WriteLine(" Ahora me interesan " + materiasDeInteres.Count + " materias");
             Console.WriteLine("primer materia ahora es " + materiasDeInteres[0].nombreMateria);
 
             //primer acercamiento ; indicar indice a remover
-            materiasDeInteres.RemoveAt(1);
+            //materiasDeInteres.RemoveAt(1);
 
             //segundo acercamiento ; arrepentirnos y "crear" la variable
             //materia sistemasInteractivosI = materiasDeInteres[1];
 
             //tercer acercamiento; buscar la variable a borrar
+            materia materiaABorrar = null;
             for (int i = 0; i < materiasDeInteres.Count; i++)
             {
                 if (materiasDeInteres[i].nombreMateria == "Sistemas Interactivos I")
@@ -75,6 +76,15 @@ namespace Repositorio_Alumnos
                     break;
                 }
             }
+            //verificar si se encontro o no
+            if (materiaABorrar != null)
+            {
+                materiasDeInteres.Remove(materiaABorrar);
+            }
+
+
+            Console.WriteLine("ahora me interesan "+ materiasDeInteres.Count + " materias");
+            Console.WriteLine("primer materia ahora es: "+ materiasDeInteres[0].nombreMateria);
         }
     }
 }
